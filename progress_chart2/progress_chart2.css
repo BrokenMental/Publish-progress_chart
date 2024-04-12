@@ -15,7 +15,6 @@
     width: 0;
     height: 100%;
     background: #4B78A8;
-    color: white;
     font-weight: bold;
     border-radius: 5px;
     position: relative;
@@ -25,13 +24,15 @@
 }
 
 .progress-chart-str {
-    position: absolute;
+    /* position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
+    position: relative;
+    top: 5px;
+    font-size: small;
 
     font-weight: 600;
-    font-size: 18px;
 }
 
 @-webkit-keyframes fill-area-percent {
