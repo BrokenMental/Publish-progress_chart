@@ -32,17 +32,22 @@ const setChartPercent = (setNumber) => {
 
 const increaseCnt = (timestamp) => {
     if(progressChart2_currentCnt < progressChart2_targetCnt) {
+        const ptChart = document.getElementById("ptChart");
         const ptChartStr = document.getElementById("ptChartStr");
         progressChart2_currentCnt++;
         ptChartStr.innerText = progressChart2_currentCnt + '%';
 
         if(progressChart2_currentCnt < 30) {
+            ptChart.style.backgroundColor = '#FF0000';
             ptChartStr.style.color = '#FF0000';
         }else if(progressChart2_currentCnt > 25 && progressChart2_currentCnt <= 50 ) {
+            ptChart.style.backgroundColor = '#FFA500';
             ptChartStr.style.color = '#FFA500';
         }else if(progressChart2_currentCnt > 50 && progressChart2_currentCnt <= 75 ) {
+            ptChart.style.backgroundColor = '#008000';
             ptChartStr.style.color = '#008000';
         }else {
+            ptChart.style.backgroundColor = '#4B78A8';
             ptChartStr.style.color = '#4B78A8';
         }
 
